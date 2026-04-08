@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" fill="none">
+  <rect width="600" height="320" fill="#231C1D"/>
+  <ellipse cx="300" cy="84" rx="140" ry="38" fill="#5D4D4D"/>
+  <rect x="160" y="84" width="280" height="148" fill="#443839"/>
+  <ellipse cx="300" cy="232" rx="140" ry="38" fill="#302627"/>
+  <path d="M300 190C334 160 332 128 300 94C268 128 266 160 300 190Z" fill="#F49A45"/>
+  <path d="M300 170C320 150 318 130 300 108C282 130 280 150 300 170Z" fill="#FFD166"/>
+  <circle cx="468" cy="84" r="34" fill="#E85D5D"/>
+  <text x="452" y="92" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#fff">°C</text>
+</svg>

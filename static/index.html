@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ООО «Основной элемент»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="logo" href="#hero">
+          <img src="static/img/logo.png" alt="Логотип ООО «Основной элемент»" />
+          <span>ООО «Основной элемент»</span>
+        </a>
+        <nav class="menu">
+          <a href="#technology">Технология</a>
+          <a href="#results">Результаты</a>
+          <a href="#process">Процесс</a>
+          <a href="#about">О компании</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero section-dark">
+        <div class="hero-bg"></div>
+        <div class="container hero-content reveal">
+          <div class="hero-copy">
+            <p class="eyebrow">Патент РФ №2804427</p>
+            <h1>Экологичная переработка нефтешламов</h1>
+            <p class="subtitle">Без отходов. Без выбросов. С получением товарных продуктов</p>
+            <p class="desc">
+              Запатентованная технология глубокой переработки нефтесодержащих отходов с
+              эффективностью до 98%
+            </p>
+          </div>
+          <aside class="hero-aside">
+            <h2>Инженерный модуль</h2>
+            <p>
+              Мобильная установка с замкнутым циклом обработки нефтешлама и контролем параметров в
+              реальном времени.
+            </p>
+              <img
+              src="static/img/hero-installation.jpg"
+              alt="Инфраструктура промышленной очистки и переработки"
+            />
+            <ul>
+              <li>До 800 кг/час</li>
+              <li>Непрерывный режим</li>
+              <li>3 оператора</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="container reveal">
+          <h2>Нефтешлам — источник экологических и финансовых рисков</h2>
+          <p class="subtitle">Традиционные методы не решают проблему полностью</p>
+          <div class="grid grid-4">
+            <article class="card problem-card">
+              <img src="static/img/problem-1.jpg" alt="Загрязнение почвы и воды" />
+              <h3>Загрязнение почвы и воды</h3>
+            </article>
+            <article class="card problem-card">
+              <img src="static/img/problem-2.jpeg" alt="Выбросы при сжигании отходов" />
+              <h3>Выбросы при сжигании отходов</h3>
+            </article>
+            <article class="card problem-card">
+              <img src="static/img/problem-3.jpg" alt="Долгосрочное хранение и накопление" />
+              <h3>Долгосрочное хранение и накопление</h3>
+            </article>
+            <article class="card problem-card">
+              <img src="static/img/problem-4.png" alt="Штрафы и платежи за НВОС" />
+              <h3>Штрафы и платежи за НВОС</h3>
+            </article>
+          </div>
+          <p class="small">
+            Ни одна из традиционных технологий не позволяет перерабатывать нефтешлам быстро и без
+            вреда для окружающей среды
+          </p>
+        </div>
+      </section>
+
+      <section id="technology" class="section section-dark">
+        <div class="container reveal">
+          <h2>Технология, которая полностью устраняет отход</h2>
+          <p class="subtitle">
+            Мы применяем метод многостадийной термомеханической деструкции, который обеспечивает
+            полную переработку нефтешламов без образования вторичных отходов и вредных выбросов
+          </p>
+          <div class="grid grid-4">
+            <article class="card accent">Полная переработка отхода</article>
+            <article class="card accent">Отсутствие выбросов</article>
+            <article class="card accent">Замкнутый цикл</article>
+            <article class="card accent">Получение товарных продуктов</article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section section-dark process">
+        <div class="container reveal">
+          <h2>Как работает технология</h2>
+          <p class="subtitle">
+            Многостадийный процесс переработки с контролируемым разложением углеводородов
+          </p>
+          <div id="pipeline-process" class="process-shell">
+            <div class="pipeline-core">
+              <div class="pipeline-track"></div>
+              <div class="pipeline-fill"></div>
+              <div class="pipeline-flow"></div>
+
+              <div class="pipeline-particles" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span
+                ><span></span><span></span><span></span><span></span><span></span><span></span
+                ><span></span><span></span>
+              </div>
+
+              <div class="pipeline-stages">
+                <article class="pipeline-stage active" data-stage="0">
+                  <div class="stage-node"></div>
+                  <h3 class="stage-title">1. Загрузка сырья</h3>
+                  <p class="stage-card">Нефтешлам подается в реактор через систему дозирования</p>
+                </article>
+                <article class="pipeline-stage" data-stage="1">
+                  <div class="stage-node"></div>
+                  <h3 class="stage-title">2. Первичная обработка</h3>
+                  <p class="stage-card">Удаление воды, кислорода и легких фракций</p>
+                </article>
+                <article class="pipeline-stage hot-zone" data-stage="2">
+                  <div class="stage-node"></div>
+                  <h3 class="stage-title">3. Глубокая деструкция</h3>
+                  <p class="stage-card">Разложение углеводородов при высокой температуре</p>
+                </article>
+                <article class="pipeline-stage" data-stage="3">
+                  <div class="stage-node"></div>
+                  <h3 class="stage-title">4. Сепарация</h3>
+                  <p class="stage-card">Разделение газов, жидкостей и твердых фракций</p>
+                </article>
+                <article class="pipeline-stage" data-stage="4">
+                  <div class="stage-node"></div>
+                  <h3 class="stage-title">5. Получение продуктов</h3>
+                  <p class="stage-card">Формирование топлива, воды и углеродного материала</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="section section-light">
+        <div class="container reveal">
+          <h2>На выходе — чистые и полезные продукты</h2>
+          <div class="grid grid-4">
+            <article class="card product-card">
+              <img src="static/img/product-gas.jpeg" alt="Газ" />
+              <h3>Газ</h3>
+              <p>Используется для поддержания работы установки</p>
+            </article>
+            <article class="card product-card">
+              <img src="static/img/product-fuel.jpeg" alt="Жидкое топливо" />
+              <h3>Жидкое топливо</h3>
+              <p>Товарный продукт для промышленного применения</p>
+            </article>
+            <article class="card product-card">
+              <img src="static/img/product-water.jpg" alt="Вода" />
+              <h3>Вода</h3>
+              <p>Соответствует нормам для сброса</p>
+            </article>
+            <article class="card product-card">
+              <img src="static/img/product-carbon.jpeg" alt="Углерод" />
+              <h3>Углерод</h3>
+              <p>Используется как сорбент и технический материал</p>
+            </article>
+          </div>
+          <p class="kpi">Глубина переработки до 98%</p>
+        </div>
+      </section>
+
+      <section class="section section-dark proof">
+        <div class="container reveal">
+          <h2>Результаты подтверждены испытаниями</h2>
+          <p class="proof-main">100 кг исходного сырья → 60 кг безопасного остатка + 40 кг полезных продуктов</p>
+          <div class="grid grid-3">
+            <article class="card accent">Вода соответствует СанПиН</article>
+            <article class="card accent">Класс опасности остатка: IV–V</article>
+            <article class="card accent">Отсутствие вредных выбросов</article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-light">
+        <div class="container reveal about-expanded">
+          <h2>О компании</h2>
+          <p class="subtitle">
+            ООО «Основной элемент» — инженерная компания, специализирующаяся на экологичной
+            переработке нефтесодержащих отходов и внедрении промышленных решений для снижения
+            техногенной нагрузки
+          </p>
+          <p>
+            Мы объединяем технологическую разработку, опыт промышленной эксплуатации и экологическую
+            экспертизу. Компания сопровождает проекты от технической оценки сырья до ввода
+            оборудования в рабочий режим и последующего сервисного сопровождения.
+          </p>
+          <div class="about-grid">
+            <article class="about-card">
+              <h3>Миссия</h3>
+              <p>
+                Сокращать экологический ущерб от нефтесодержащих отходов за счет промышленно
+                применимых технологий глубокой переработки без вторичных загрязнений.
+              </p>
+            </article>
+            <article class="about-card">
+              <h3>Стратегическая цель</h3>
+              <p>
+                Формировать новый стандарт обращения с нефтешламами, в котором отход становится
+                ресурсом, а переработка экономически и экологически оправданной.
+              </p>
+            </article>
+            <article class="about-card">
+              <h3>Ключевые принципы</h3>
+              <p>
+                Инженерная точность, безопасность процессов, прозрачность для заказчика и строгий
+                контроль соответствия экологическим требованиям.
+              </p>
+            </article>
+            <article class="about-card">
+              <h3>Что получает заказчик</h3>
+              <p>
+                Технологическое решение под конкретный состав отхода, понятную экономику проекта,
+                снижение рисков по НВОС и практический результат на производственной площадке.
+              </p>
+            </article>
+          </div>
+          <p class="kpi">Технология защищена патентом РФ №2804427</p>
+        </div>
+      </section>
+
+      <section id="cta" class="section cta section-dark">
+        <div class="container cta-wrap reveal">
+          <div>
+            <h2>Получите расчет проекта</h2>
+            <p class="subtitle">Оставьте контакты и объем отходов, подготовим техническое решение</p>
+          </div>
+          <form class="form" action="#" method="post">
+            <label>
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              <span>Компания</span>
+              <input type="text" name="company" placeholder="Название компании" required />
+            </label>
+            <label>
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required />
+            </label>
+            <label>
+              <span>Объем отходов</span>
+              <input type="text" name="volume" placeholder="Например: 1200 т/мес" required />
+            </label>
+            <button type="submit" class="btn btn-primary">Получить расчет</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+      <div class="container footer-grid">
+        <div>
+          <img class="footer-logo" src="static/img/logo.png" alt="Логотип ООО «Основной элемент»" />
+          <h3>ООО «Основной элемент»</h3>
+          <p>
+            Экологические технологии переработки нефтесодержащих отходов с получением товарных
+            продуктов
+          </p>
+          <p class="small">Запатентованная технология многостадийной термомеханической деструкции</p>
+        </div>
+        <div>
+          <h4>Разделы</h4>
+          <a href="#hero">Главная</a>
+          <a href="#technology">Технология</a>
+          <a href="#results">Результаты</a>
+          <a href="#process">Процесс</a>
+          <a href="#about">О компании</a>
+          <a href="#contacts">Контакты</a>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <p>📞 +7 (921) 993-04-58</p>
+          <p>✉️ oselement@yandex.ru</p>
+          <p>📍 г. Санкт-Петербург, пр. Обуховской обороны, д. 86, офис 312</p>
+          <a class="btn btn-primary footer-btn" href="#cta">Получить расчет</a>
+        </div>
+        <div>
+          <h4>Юридическая информация</h4>
+          <p>ООО «Основной элемент»</p>
+          <p>ОГРН 1257800083749</p>
+          <p>ИНН 7811810753</p>
+          <p>КПП 781101001</p>
+          <p>Генеральный директор: Попов Павел Сергеевич</p>
+          <p>Технология защищена патентом РФ №2804427</p>
+        </div>
+      </div>
+      <div class="subfooter">
+        <div class="container subfooter-row">
+          <p>© 2026 ООО «Основной элемент». Все права защищены</p>
+          <div>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Пользовательское соглашение</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="static/process.js"></script>
+  </body>
+</html>
