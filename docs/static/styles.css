@@ -569,6 +569,107 @@ h2 {
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 800;
   color: var(--green);
+  text-shadow: 0 0 40px rgba(93, 174, 29, 0.45);
+}
+
+/* ═══════════════════════════════════════════════
+   DESIGN ENHANCEMENTS
+═══════════════════════════════════════════════ */
+
+/* Gradient text — hero headline */
+.hero h1 {
+  background: linear-gradient(140deg, #ffffff 0%, #c8e8ff 45%, #d4f7a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient text — dark section headings */
+.section-dark h2 {
+  background: linear-gradient(135deg, #ffffff 30%, #a8d4f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glowing eyebrow pill */
+.eyebrow {
+  box-shadow: 0 0 20px rgba(93, 174, 29, 0.28), inset 0 0 12px rgba(147, 220, 92, 0.1);
+}
+
+/* Richer primary button */
+.btn-primary {
+  background: linear-gradient(135deg, #74d426 0%, #4ca514 100%);
+  box-shadow: 0 4px 22px rgba(110, 198, 38, 0.38);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 8px 32px rgba(110, 198, 38, 0.55);
+  transform: translateY(-2px);
+}
+
+/* Better accent cards in dark sections */
+.section-dark .card.accent {
+  background: linear-gradient(145deg, #1d3347 0%, #24404f 100%);
+  border-left: 4px solid var(--blue);
+  box-shadow: -3px 0 18px rgba(43, 140, 214, 0.22), inset 0 0 24px rgba(43, 140, 214, 0.05);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.section-dark .card.accent:hover {
+  transform: translateY(-6px);
+  box-shadow: -3px 0 26px rgba(43, 140, 214, 0.38), 0 16px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Proof KPI statement */
+.proof-main {
+  background: linear-gradient(135deg, #ffffff, #b8e4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* About cards polish */
+.about-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f4f9fe 100%);
+  transition: transform 0.24s ease, box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(43, 140, 214, 0.14);
+  border-color: rgba(43, 140, 214, 0.38);
+}
+
+.about-card h3 {
+  background: linear-gradient(135deg, var(--blue) 0%, #4ab0f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Form input focus */
+.form input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(43, 140, 214, 0.18);
+}
+
+/* Process section background enhancement */
+.process {
+  background:
+    radial-gradient(ellipse at 10% 50%, rgba(43, 140, 214, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 50%, rgba(93, 174, 29, 0.1) 0%, transparent 50%),
+    linear-gradient(180deg, #202a35, #1f2732);
+}
+
+/* ═══════════════════════════════════════════════
+   VERTICAL PIPELINE (mobile snake — hidden on desktop)
+═══════════════════════════════════════════════ */
+.pipeline-vline,
+.pipeline-vdot {
+  display: none;
 }
 
 .about-expanded p {
@@ -1017,59 +1118,121 @@ h2 {
 
   .process-shell {
     margin-top: 16px;
-    padding: 16px 12px 14px;
+    padding: 20px 16px 20px;
     border-radius: 14px;
   }
 
+  /* ── Vertical snake pipeline ── */
   .pipeline-core {
-    min-height: 280px;
+    min-height: auto;
+    padding-left: 36px;
   }
 
+  /* Hide the horizontal track/fill/flow/particles */
   .pipeline-track,
-  .pipeline-fill {
-    top: 72px;
-    left: 80px;
-    right: 80px;
+  .pipeline-fill,
+  .pipeline-flow,
+  .pipeline-particles {
+    display: none;
   }
 
-  .pipeline-fill {
-    width: calc((100% - 160px) * var(--process-progress));
+  /* Vertical line track */
+  .pipeline-vline {
+    display: block;
+    position: absolute;
+    left: 11px;
+    top: 11px;
+    bottom: 11px;
+    width: 3px;
+    border-radius: 2px;
+    background: rgba(86, 127, 160, 0.32);
+    overflow: hidden;
   }
 
-  .pipeline-flow {
-    top: 62px;
-    left: calc(80px + ((100% - 160px) * var(--process-progress)));
+  .pipeline-vline-fill {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #32a3ff 0%, #7bc91f 100%);
+    box-shadow: 0 0 14px rgba(50, 163, 255, 0.7);
+    transform-origin: top center;
+    transform: scaleY(var(--process-progress));
+    transition: transform 0.16s linear;
+    border-radius: 2px;
   }
 
+  /* Glowing dot that travels down the line */
+  .pipeline-vdot {
+    display: block;
+    position: absolute;
+    left: 3px;   /* (11px vline-center) – 9px (half of 18px dot) */
+    top: calc(var(--process-progress) * (100% - 18px));
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffffff, #48b8ff 65%, transparent);
+    filter: drop-shadow(0 0 8px rgba(77, 188, 255, 0.95));
+    transition: top 0.16s linear;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  /* Stages: vertical flex column */
   .pipeline-stages {
-    gap: 10px;
-    grid-template-columns: repeat(5, minmax(170px, 1fr));
-    padding-bottom: 8px;
-    scroll-snap-type: x mandatory;
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    grid-template-columns: none !important;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    padding-bottom: 0;
   }
 
+  /* Each stage: block layout so title + card stack vertically */
   .pipeline-stage {
-    min-height: 224px;
-    scroll-snap-align: center;
+    display: block !important;
+    min-height: auto;
+    text-align: left;
+    justify-items: start;
+    padding-bottom: 26px;
+    position: relative;
+    scroll-snap-align: none;
   }
 
+  .pipeline-stage:last-child {
+    padding-bottom: 6px;
+  }
+
+  /* Node sits on the vertical line */
   .stage-node {
-    margin-top: 61px;
+    position: absolute;
+    left: -33px;  /* centers the 22px dot on the vline center at 12px */
+    top: 0;
+    margin-top: 0;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    z-index: 2;
   }
 
   .stage-title {
     font-size: 15px;
-    margin-top: 12px;
+    margin-top: 1px;
     margin-bottom: 8px;
   }
 
+  /* Always show description card on mobile */
   .stage-card {
     font-size: 13px;
-    padding: 10px 8px;
+    padding: 10px 12px;
+    max-width: 100% !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .pipeline-particles {
-    inset: 42px 2% 0;
+  /* Alternating snake accents: even stages tinted differently */
+  .pipeline-stage:nth-child(even) .stage-card {
+    border-color: rgba(124, 201, 31, 0.38);
+    background: rgba(30, 53, 35, 0.94);
   }
 
   .media img,
